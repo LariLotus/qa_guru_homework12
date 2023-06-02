@@ -7,7 +7,7 @@ from selene import browser, be
 
 
 @pytest.fixture(
-    params=[(1920, 1080),  (1600, 1200), (360, 740), (740, 360)],
+    params=[(1920, 1080), (1600, 1200), (360, 740), (740, 360)],
 
     ids=['desktop', 'desktop', 'mobile', 'mobile'],
 )
@@ -22,7 +22,6 @@ def browser_open(request):
 
     yield is_desktop
     browser.quit()
-
 
 
 def test_github_desktop(browser_open):

@@ -25,9 +25,11 @@ def web_browser_for_mobile(request):
 
 
 def test_github_desktop(web_browser_for_desktop):
+    browser.open('https://github.com')
     browser.element('[href="/login"]').click()
 
 
 def test_github_mobile(web_browser_for_mobile):
+    browser.open('https://github.com')
     browser.element('[class="Button-content"]').click()
     browser.element('[href="/login"]').click()
