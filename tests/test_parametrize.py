@@ -21,5 +21,6 @@ def test_github_desktop(browser_open):
 
 @pytest.mark.parametrize('browser_open', [(360, 740), (740, 360)], indirect=True)
 def test_github_mobile(browser_open):
+    browser.open('https://github.com')
     browser.element('[class="Button-content"]').click()
     browser.element('[href="/login"]').click()
