@@ -2,7 +2,6 @@
 Сделайте разные фикстуры для каждого теста, которые выставят размеры окна браузера
 """
 import pytest
-from selene import be
 from selene.support.shared import browser
 
 
