@@ -24,6 +24,7 @@ def browser_open(request):
     browser.quit()
 
 
+@pytest.mark.skip(reason='Пропускаем, тест для мобильного')
 def test_github_desktop(browser_open):
     if not browser_open:
         pytest.skip(reason='Пропускаем, тест для мобильного')
@@ -31,6 +32,7 @@ def test_github_desktop(browser_open):
     browser.element('[href="/login"]').click()
 
 
+@pytest.mark.skip(reason='Пропускаем, тест для desktop')
 def test_github_mobile(browser_open):
     if browser_open:
         pytest.skip(reason='Пропускаем, тест для desktop')
