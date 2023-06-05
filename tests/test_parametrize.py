@@ -16,6 +16,7 @@ def browser_open(request):
 
 @pytest.mark.parametrize('browser_open', [(1920, 1080), (1600, 1200)], indirect=True)
 def test_github_desktop(browser_open):
+    browser.open('https://github.com')
     browser.element('[href="/login"]').click()
 
 
